@@ -71,12 +71,6 @@ CREATE TABLE IF NOT EXISTS transfer_history (
     CONSTRAINT chk_same_oldnew_team_id CHECK (old_team_id <> new_team_id)
 );
 
-CREATE TRIGGER ten_trg
-AFTER/BEFORE UPDATE on ten_bang
-FOR EACH ROW
-BEGIN
-END //
-
 # Phần 2
 # Câu 1
 INSERT INTO teams (team_name, founded_year, stadium, ranking_position)
