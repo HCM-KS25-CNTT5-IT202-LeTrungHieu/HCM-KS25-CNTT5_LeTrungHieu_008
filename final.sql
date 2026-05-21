@@ -312,7 +312,7 @@ BEGIN
       SET message_text = 'Lỗi: Đội bóng mới không tồn tại';
     END IF ;
     
-		UPDATE players SET team_id = p_team_id WHERE player_id = p_player_id;
+		UPDATE players SET team_id = p_new_team_id WHERE player_id = p_player_id;
     
     INSERT INTO transfer_history (player_id, old_team_id, new_team_id)
     VALUES
